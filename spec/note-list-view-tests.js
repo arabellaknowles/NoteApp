@@ -28,7 +28,8 @@
   };
 
   function testReturnsHTMLList() {
-    assert.isTrue(myNoteListView.returnHTML() === "<ul><li><div>Favourite drink: sel</div></li><li><div>Favourite food: pizz</div></li></ul>")
+    console.log(myNoteListView.returnHTML())
+    assert.isTrue(myNoteListView.returnHTML() === "<ul><li><a href='#notes/0'>Favourite drink: sel</a></li><li><a href='#notes/1'>Favourite food: pizz</a></li></ul>")
   };
 
 

@@ -14,3 +14,4 @@ class NoteController {
 
 var noteController = new NoteController
 noteController.render()
+
