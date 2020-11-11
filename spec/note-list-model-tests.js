@@ -1,13 +1,22 @@
 (function() {
-    var notelist = new notelist();
+    var mynotelist = new noteList();
+    mynotelist.add("this is a new note");
+    mynotelist.add("this is another new note");
 
     function testNoteListIsInstantiatedWithEmptyArray() {
-        assert.isTrue(Array.isArray(notelist.notes));
+        assert.isTrue(Array.isArray(mynotelist.notes));
     };
+
 
     function testNoteListCanAddANoteToArray() {
-        notelist.add("this is a new note");
-        assert.isTrue(notelist.notes[0].text === "this is a new note");
+        assert.isTrue(mynotelist.notes[0].text === "this is a new note");
     };
 
-})();
+    function testNoteListCanReturnAllNotesInNotes() {
+        assert.isTrue(mynotelist.all() === mynotelist.notes);
+    };
+    testNoteListIsInstantiatedWithEmptyArray();
+    testNoteListCanReturnAllNotesInNotes();
+    testNoteListIsInstantiatedWithEmptyArray();
+})
+();
