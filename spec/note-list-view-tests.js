@@ -1,17 +1,18 @@
 (function() {
-    var mynotelist = new noteList();
+    var myNoteList = new noteList();
     for (let i = 1; i <= 3; i++) {
-        mynotelist.add(`Note ${i}`);
+        myNoteList.add(`Note ${i}`);
     }
-    var mynoteListView = new noteListView(mynotelist);
+    var myNoteListView = new noteListView(myNoteList);
 
 
     function testInitializesWithNoteList() {
-        assert.isTrue(mynoteListView.list === mynotelist.all());
+        assert.isTrue(myNoteListView.list === myNoteList.all());
     };
 
     function testReturnsHTMLList() {
-        assert.isTrue(mynoteListView.returnHTML() === "<ul><li><div>Note 1</div></li><li><div>Note 2</div></li><li><div>Note 3</div></li></ul>")
+        console.log(myNoteListView.returnHTML());
+        assert.isTrue(myNoteListView.returnHTML() === "<ul><li><div>Note 1</div></li><li><div>Note 2</div></li><li><div>Note 3</div></li></ul>")
     };
 
 
