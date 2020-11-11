@@ -9,7 +9,7 @@
 
 
   function testNoteListCanAddANoteToArray() {
-    assert.isTrue(mynotelist.notes[0].text === "this is a new note");
+    assert.isTrue(mynotelist.notes[0].text() === "this is a new note");
   };
 
   function testNoteListCanReturnAllNotesInNotes() {
@@ -18,5 +18,6 @@
   testNoteListIsInstantiatedWithEmptyArray();
   testNoteListCanReturnAllNotesInNotes();
   testNoteListIsInstantiatedWithEmptyArray();
+  testNoteListCanAddANoteToArray();
 })
   ();

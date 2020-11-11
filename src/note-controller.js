@@ -5,7 +5,8 @@ class NoteController {
     this.view = new NoteListView(this.list)
   }
 
-  render() {
-    document.getElementById('app').innerHTML = this.view.returnHTML()
+  render(view = this.view) {
+    console.log(document.getElementById('app'))
+    document.getElementById('app').innerHTML = view.returnHTML()
   }
 }
