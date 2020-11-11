@@ -4,11 +4,12 @@ class NoteList {
   }
 
   add(text) {
-    var newNote = new Note(text);
-    this.notes.push(newNote);
+    let id = this.notes.length
+    let newNote = new Note(text, id)
+    this.notes.push(newNote)
   }
 
   all() {
-    return this.notes;
+    return this.notes
   }
-};
+}

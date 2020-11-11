@@ -2,7 +2,7 @@
   var controller = new NoteController
   var noteListViewDouble = {}
   noteListViewDouble.returnHTML = function () {
-    return '<ul><li><div>Favourite food: pesto</div></li></ul>'
+    return '<ul><li><div>Favourite food: pes</div></li></ul>'
   }
 
   function controllerCanBeInstantiated() {
@@ -10,7 +10,7 @@
   }
 
   function divIsChangedToViewList() {
-    assert.isTrue(document.getElementById('app').innerHTML === '<ul><li><div>Favourite food: pesto</div></li></ul>')
+    assert.isTrue(document.getElementById('app').innerHTML === '<ul><li><div>Favourite food: pes</div></li></ul>')
   }
 
   controllerCanBeInstantiated()

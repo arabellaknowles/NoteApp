@@ -1,10 +1,10 @@
 class Note {
-    constructor(text) {
-        this.note = text;
+    constructor(text, id) {
+      this.note = text
+      this.id = id
     }
 
     text() {
-        return this.note;
+      return this.note;
     }
-
 }
