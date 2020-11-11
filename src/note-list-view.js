@@ -6,7 +6,9 @@ class NoteListView {
   returnHTML() {
     let htmlOutput = "";
     for (let i = 0; i < this.list.length; i++) {
-      htmlOutput += "<li><div>" + this.list[i].text() + "</div></li>"
+      var limitedNote = this.list[i].text().substring(0, 20)
+      console.log(limitedNote)
+      htmlOutput += "<li><div>" + limitedNote + "</div></li>"
     }
     return "<ul>" + htmlOutput + "</ul>"
   };

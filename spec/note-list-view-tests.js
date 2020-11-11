@@ -1,18 +1,34 @@
 (function () {
-  var myNoteList = new NoteList();
-  for (let i = 1; i <= 3; i++) {
-    myNoteList.add(`Note ${i}`);
+  var note1 = {
+    text: function () {
+      return 'Favourite drink: seltzer';
+    }
   }
+  var note2 = {
+    text: function () {
+      return 'Favourite food: pizza. I love it soooooo much!';
+    }
+  }
+
+  var array = [note1, note2]
+
+  var myNoteList = {
+    all: function () {
+      return array
+    }
+  }
+
   var myNoteListView = new NoteListView(myNoteList);
 
 
   function testInitializesWithNoteList() {
-    assert.isTrue(myNoteListView.list === myNoteList.all());
+    console.log(myNoteListView.list)
+    console.log(myNoteList.all())
+    assert.isTrue(myNoteListView.list == myNoteList.all());
   };
 
   function testReturnsHTMLList() {
-    console.log(myNoteListView.returnHTML());
-    assert.isTrue(myNoteListView.returnHTML() === "<ul><li><div>Note 1</div></li><li><div>Note 2</div></li><li><div>Note 3</div></li></ul>")
+    assert.isTrue(myNoteListView.returnHTML() === "<ul><li><div>Favourite drink: sel</div></li><li><div>Favourite food: pizz</div></li></ul>")
   };
 
 
