@@ -7,11 +7,23 @@ class NoteController {
   }
 
   render(view = this.view) {
-    console.log(document.getElementById('app'))
     document.getElementById('app').innerHTML = view.returnHTML()
+  }
+
+  renderNote(n) {
+    var singleNoteView = new SingleNoteView(this.list.get(n))
+    document.getElementById('app').innerHTML = singleNoteView.outputHTML()
   }
 }
 
 var noteController = new NoteController
 noteController.render()
 
+window.addEventListener('hashchange', function (event) {
+  if (event.newURL.slice(-1) == '/') {
+    noteController.render()
+  } else {
+    let n = event.newURL.slice(-1)
+    noteController.renderNote(n)
+  }
+}, false);

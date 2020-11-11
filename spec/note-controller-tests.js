@@ -1,5 +1,14 @@
 (function () {
-  var controller = new NoteController
+  var note1 = {
+    text: function () { return 'Test note' }
+  }
+
+  var noteList = {
+    getNote: function () { return note1 },
+    add: function () { },
+    all: function () { }
+  }
+  var controller = new NoteController(noteList)
   var noteListViewDouble = {}
   noteListViewDouble.returnHTML = function () {
     return '<ul><li><div>Favourite food: pes</div></li></ul>'
@@ -13,8 +22,15 @@
     assert.isTrue(document.getElementById('app').innerHTML === '<ul><li><div>Favourite food: pes</div></li></ul>')
   }
 
+  function loadContentOfNoteWhenVisitCorresspondingURL() {
+    controller.renderNote(0)
+    console.log(document.getElementById('app').innerHTML)
+    assert.isTrue(document.getElementById('app').innerHTML === '<div>Test note</div>')
+  }
+
   controllerCanBeInstantiated()
 
   controller.render(noteListViewDouble)
   divIsChangedToViewList()
+  loadContentOfNoteWhenVisitCorresspondingURL()
 })()

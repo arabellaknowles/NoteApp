@@ -9,6 +9,10 @@ class NoteList {
     this.notes.push(newNote)
   }
 
+  get(n) {
+    return this.notes[n]
+  }
+
   all() {
     return this.notes
   }
