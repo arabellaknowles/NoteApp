@@ -4,7 +4,7 @@
   }
 
   var noteList = {
-    getNote: function () { return note1 },
+    get: function () { return note1 },
     add: function () { },
     all: function () { }
   }

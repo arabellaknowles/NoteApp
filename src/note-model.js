@@ -5,6 +5,6 @@ class Note {
     }
 
     text() {
-      return this.note;
+      return this.note
     }
 }
