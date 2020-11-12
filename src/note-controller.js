@@ -26,4 +26,4 @@ window.addEventListener('hashchange', function (event) {
     let n = event.newURL.slice(-1)
     noteController.renderNote(n)
   }
-}, false);
+}, false)
