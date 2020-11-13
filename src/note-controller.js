@@ -31,6 +31,7 @@ window.addEventListener('hashchange', function(event){
 
 const form = document.getElementById('text')
 form.addEventListener('submit', function(event){
-  event.preventDefault()
-  return console.log(event)
+  event.preventDefault();
+  let userInput = document.getElementById('textarea').value;
+  console.log(userInput);
 })
