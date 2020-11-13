@@ -12,6 +12,12 @@
   <div id="app">
     Hello;
   </div>
+  <form id='text' action='#notes/new' method='POST'>
+    <textarea rows="4" cols="40" name="note" id="textarea">
+      Enter new note here...
+    </textarea>
+    <input type="submit" value="Submit">
+  </form>
   <script src="src/note-model.js"></script>
   <script src="src/note-list-model.js"></script>
   <script src="src/note-list-view.js"></script>

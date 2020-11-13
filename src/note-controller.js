@@ -1,8 +1,6 @@
 class NoteController {
   constructor(noteList = new NoteList) {
     this.list = noteList
-    this.list.add("Favourite drink: seltzer")
-    this.list.add("Favourite food: pizzzaa")
     this.view = new NoteListView(this.list)
   }
 

@@ -1,6 +1,7 @@
 (function () {
   var note1 = {
-    text: function () { return 'Test note' }
+    text: function () { return 'Test note' },
+    id: function(){ return 0 }
   }
 
   var noteList = {
