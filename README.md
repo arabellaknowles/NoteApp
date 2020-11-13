@@ -1,7 +1,7 @@
 # Note App
 #### Set Up
 1) Clone this repository
-2) Run this in your terminal:
+2) Run this in your terminal in order to install required dependencies:
 ```
 $ npm install
 ```

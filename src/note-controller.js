@@ -19,7 +19,7 @@ class NoteController {
 var noteController = new NoteController
 noteController.render()
 
-window.addEventListener('hashchange', function (event) {
+window.addEventListener('hashchange', function(event){
   if (event.newURL.slice(-1) == '/') {
     noteController.render()
   } else {
@@ -27,3 +27,10 @@ window.addEventListener('hashchange', function (event) {
     noteController.renderNote(n)
   }
 }, false)
+
+
+const form = document.getElementById('text')
+form.addEventListener('submit', function(event){
+  event.preventDefault()
+  return console.log(event)
+})
